@@ -1,17 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
+import DownloadBtn from '../components/DownloadBtn.astro';
 ---
 
 <Layout title="Doctor AI | Inicio">
 	<Header />
 	<main class="flex flex-row items-center justify-between px-20 py-20">
-		<div class="flex flex-col items-center justify-center w-full">
-			<h1 class="text-gradient">Descarga la App</h1>
+		<div class="flex flex-col w-full space-y-10">
+			<h1 class="text-gradient text-6xl font-bold text-left text-balance">Asistente médico personal al alcance de tu celular</h1>
+			<p class="text-gray-100">Disponibilidad 24/7, potenciado con AI, teniendo en cuenta tu historial médico. Integración con farmacias y servicios médicos presenciales de terceros.</p>
+			<div class="flex flex-row space-x-4">
+				<DownloadBtn os="App Store" url="https://companieslogo.com/img/orig/AAPL.D-149adf35.png?t=1720244490" />
+				<DownloadBtn os="Google Play" url="/img/Google-Play-icon-logo.png" />
+			</div>
 		</div>
 		<div class="flex flex-col items-center justify-center w-full">
-			<img class="aspect-auto" src="/img/Banner.png" alt="Doctor AI Banner" />
+			<img class="" src="/img/Banner.png" alt="Doctor AI Banner" />
 		</div>
 	</main>
 </Layout>
@@ -26,22 +31,7 @@ import Header from '../components/Header.astro';
 		font-size: 20px;
 		line-height: 1.6;
 	} */
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
+	
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;

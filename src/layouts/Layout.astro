@@ -17,14 +17,17 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<div class="fixed left-0 top-0 -z-10 h-full w-full">
+			<div class="relative h-full w-full bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div></div>
+		</div>
 		<slot />
 	</body>
 </html>
 <style is:global>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
+		--accent: 0,255,255;
+		--accent-light: 143, 211, 211;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
 			45deg,
@@ -33,8 +36,9 @@ const { title } = Astro.props;
 			white 60%
 		);
 		--font-poppins: 'Poppins', system-ui, sans-serif;
-		--primary: #00FFFF;
+		--primary: rgb(0, 255, 255);
 		--secondary: #0FC2C2;
+		--third: rgb(143, 211, 211);
 		--backgrond: #0D0D1B;
 
 	}

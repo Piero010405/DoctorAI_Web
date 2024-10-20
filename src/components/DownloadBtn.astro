@@ -1,0 +1,16 @@
+---
+interface Props {
+    os: string;
+    url: string;
+}
+
+const { os, url } = Astro.props;
+---
+
+<a class="rounded-lg bg-black px-3 py-2 text-base text-white hover:opacity-80 ease-in-out duration-150 flex flex-row items-center space-x-1 w-48 justify-center cursor-pointer">
+    <img class="h-10 mr-2" src={url} alt={`Download in ${os}`} />
+    <div class="flex flex-col text-xs text-left">
+        <span>Disponible en</span>
+        <span class="text-lg font-medium">{os}</span>
+    </div>
+</a>
