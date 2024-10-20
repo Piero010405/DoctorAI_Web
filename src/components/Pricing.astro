@@ -1,0 +1,20 @@
+---
+import PricingCard from "./PricingCard.astro"
+
+const itemsIndividual = ["2 perfiles", "10GB de memoria de contexto", "20 envios de imágenes  al día"];
+const itemsFamiliar = ["5 perfiles", "20GB de memoria de contexto", "50 envios de imágenes  al día"];
+const itemsPro= ["15 perfiles", "70GB de memoria de contexto", "Sin límites de envío de imágenes"];
+---
+<section id='princing'>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">Precios</h2>
+            <p class="mb-5 font-light  sm:text-xl text-gray-400">Elige el plan que mejor se acomode a tus necesidades. </p>
+        </div>
+        <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+            <PricingCard plan="Individual" precio="10.99" features={itemsIndividual} descripcion="Mejor opción para uso personal y una atención personalizada"/>
+            <PricingCard plan="Familiar" precio="15.99" features={itemsFamiliar} descripcion="Pensado para multi-usuarios, tutores y cuentas familiares"/>
+            <PricingCard plan="Pro" precio="29.99" features={itemsPro} descripcion="Lo mejor para asistentes médicos y profesionales de la salud"/>
+        </div>
+    </div>
+  </section>
