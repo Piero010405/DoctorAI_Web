@@ -6,6 +6,6 @@ interface Props {
 const { title, href } = Astro.props;
 ---
 
-<a class="rounded-lg bg-white px-3 py-2 text-base font-medium text-black hover:opacity-80 ease-in-out duration-150" href={href}>
+<a class="rounded-lg bg-white px-3 py-2 text-base font-medium text-black hover:opacity-80 ease-in-out duration-150" href={href} rel="noopener noreferrer" target="_blank">
     {title}
 </a>
